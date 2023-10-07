@@ -26,7 +26,7 @@ plugins {
 }
 
 group = "com.daymxn"
-version = "1.0.0"
+version = "1.0.1"
 
 dependencies {
     implementation(libs.kotlinx.coroutines.core)
@@ -44,13 +44,13 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("com.daymxn.MainKt")
 }
 
 tasks {
     withType<ShadowJar> {
         manifest{
-            attributes["Main-Class"] = "MainKt"
+            attributes["Main-Class"] = "com.daymxn.MainKt"
             attributes["Implementation-Version"] = project.version
         }
         minimize {
